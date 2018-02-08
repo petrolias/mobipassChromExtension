@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <style type="text/css">
+    body {
+      margin: 10px;
+      white-space: nowrap;
+    }
+
+    h1 {
+      font-size: 15px;
+    }
+
+    #container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #qrcode {
+      width: 160px;
+      height: 160px;
+      margin-top: 15px;
+    }
+  </style>
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/qrcode.min.js"></script>
+  <script src="libs/aes.js"></script>
+  <script src="libs/bower_components/socket-io-client/socket.io.js"></script>
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <h1>MobiPass</h1>
+  <div id="container">
+    <div id="key"></div>
+  </div>
+  <div id="container">
+    <div id="qrcode"></div>
+  </div>
+  <button type="button" id="btnGenerateNew">Generate new</button>
+  <button type="button" id="btnSendMsg">Send Message</button>
+  <button type="button" id="btnRequester">Request</button>
+  <button type="button" id="btnDisconect">Disconect</button>
+
+</body>
+
+</html>

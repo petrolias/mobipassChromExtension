@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "MobiPass",
+  "description": "No description yet",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "all_frames": false,
+    "js": [
+      "libs/bower_components/socket-io-client/socket.io.js",
+      "mobipass.inject.js"
+    ],
+    "matches": ["http://*/*", "https://*/*"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "tabs"    
+  ]
+}
+// "background": {
+//   "scripts": [
+//     "background.js"
+//   ],
+//   "persistent": true
+// },
